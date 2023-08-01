@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Contact Form with PHP &amp AJAX</title>
+</head>
+<body class="flex items-center justify-center w-full h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
+  <div class="bg-sky-400 rounded-xl p-5 drop-shadow-lg">
+    <header>
+      <h1 class="text-3xl font-medium">Send Me a Message in Gmail</h1>
+    </header>
+    <form action="#" class="w-full flex flex-col gap-5 my-5">
+      <div class="flex justify-between items-center gap-2 bg-white px-3 py-2 rounded focus-within:outline outline-offset-1 outline-2 outline-blue-500">
+        <i class="fa-regular fa-user w-4 aspect-square object-cover"></i>
+        <input type="text" name="fullname" placeholder="Enter your Full Name" class="w-full outline-none">
+      </div>
+      <div class="flex justify-between items-center gap-2 bg-white px-3 py-2 rounded focus-within:outline outline-offset-1 outline-2 outline-blue-500">
+        <i class="fa-regular fa-envelope w-4 aspect-square object-cover"></i>
+        <input type="email" name="email" placeholder="Enter your Email Address" class="w-full outline-none">
+      </div>
+      <div class="flex justify-between items-center gap-2 bg-white px-3 py-2 rounded focus-within:outline outline-offset-1 outline-2 outline-blue-500">
+        <i class="fa-solid fa-mobile-screen w-4 aspect-square object-cover"></i>
+        <input type="number" name="number" placeholder="Enter your Mobile Number" class="w-full outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+      </div>
+      <div class="flex justify-between items-center gap-2 bg-white px-3 py-2 rounded focus-within:outline outline-offset-1 outline-2 outline-blue-500">
+        <i class="fa-regular fa-envelope w-4 aspect-square object-cover"></i>
+        <input type="text" name="subject" placeholder="Enter Subject" class="w-full outline-none">
+      </div>
+      <div class="flex justify-between gap-2 bg-white px-3 py-2 rounded focus-within:outline outline-offset-1 outline-2 outline-blue-500">
+        <i class="fa-regular fa-message w-4 aspect-square object-cover py-1"></i>
+        <textarea name="message" id="" cols="30" rows="5" placeholder="Write your Message" class="w-full outline-none"></textarea>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <button type="submit" class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 w-full">Send Message</button>
+        <span class="status hidden">Status of your Message</span>
+      </div>
+    </form>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

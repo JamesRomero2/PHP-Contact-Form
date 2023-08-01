@@ -1,0 +1,39 @@
+version: '3'
+services:
+  database:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=lamp_docker_db
+      - MYSQL_USER=lamp_docker_user
+      - MYSQL_PASSWORD=lamp_docker_password
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    networks:
+      - lamp-docker
+
+  www:
+    image: php:8.1.1-apache
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - lamp-docker
+    depends_on:
+      - database
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8001:80
+    environment:
+      - PMA_HOST=database
+      - PMA_PORT=3306
+    networks:
+      - lamp-docker
+    depends_on:
+      - database
+
+networks:
+  lamp-docker:
+    driver: bridge
